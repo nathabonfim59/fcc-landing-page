@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    padding-left: 3em;
+    padding-right: 3em;
+    background: pink; /* Debugging */
+}
+
+.navbar {
+    padding-left: 3em;
+    padding-right: 3em;
+    background: #0A0A23;
+    display: flex;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 1.3em;
+    width: auto;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+}
+
+.navbar-nav li {
+    margin-left: 2.3em;
+    padding: .1em 1em;
+    padding-bottom: .2em;
+}
+
+.navbar-nav li.active,
+.navbar-nav li.active *,
+.navbar-nav li:hover,
+.navbar-nav li:hover * {
+    background: #8787EA;
+    border-radius: 1em;
+    color: #0A0A23;
+    transition: background ease-in-out .08s;
+}
+
+.navbar-nav a {
+    font-size: .9em;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
