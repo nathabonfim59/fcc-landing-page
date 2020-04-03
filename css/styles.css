@@ -3,14 +3,7 @@ html, body {
     padding: 0;
 }
 
-.container {
-    margin: 0;
-    padding: 0;
-    padding-left: 3em;
-    padding-right: 3em;
-}
-
-.navbar {
+#header {
     padding-left: 3em;
     padding-right: 3em;
     background: #0A0A23;
@@ -19,12 +12,12 @@ html, body {
     top: 0;
 }
 
-.navbar-logo {
+.header-logo {
     display: flex;
     align-items: center;
 }
 
-.navbar-logo img {
+.header-logo img {
     height: 1.3em;
     width: auto;
 }
@@ -95,6 +88,11 @@ html, body {
 
 .navbar-toggle-icon::after {
     margin-top: -.5em;
+}
+
+section {
+    min-height: 30em;
+    background: red;
 }
 
 @media screen and (max-width: 992px) {
