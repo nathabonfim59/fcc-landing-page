@@ -26,21 +26,17 @@ function navbarToggleClicked() {
  * Verifies if navbar is clicked and add the 'active' CSS class to it
  */
 function navbarItemClicked() {
-    var navbarNav = document.getElementsByClassName('navbar-nav')[0];
+    var navbarNav = document.getElementById('nav-bar');
     navbarNav.addEventListener("click", function(event) {
         var lastActive = document.getElementsByClassName('active')[0];
-        var targetElement;
+        var targetElement = event.target;
         
-        var anchorClicked = event.path.length == 8;
-        var listItemClicked = event.path.length == 7;
+        // Prevents the navbar from recieving the 'active' class
+        var isNavlink = event.toElement.localName == "a";
 
-        if (anchorClicked) {
-            targetElement = event.path[1];
-        } else if (listItemClicked) {
-            targetElement = event.path[0];
+        if (isNavlink) {
+            lastActive.classList.remove('active');
+            targetElement.classList.add('active');
         }
-
-        lastActive.classList.remove('active');
-        targetElement.classList.add('active');
     });
 }
