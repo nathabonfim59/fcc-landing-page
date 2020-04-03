@@ -94,8 +94,9 @@ section {
 }
 
 @media screen and (max-width: 992px) {
-    #nav-bar {
-        height: 2.6em;
+    #header {
+        height: 2.8em;
+        overflow-x: auto;
     }
 
     .header-logo {
@@ -104,20 +105,21 @@ section {
     }
 
     #nav-bar {
-        visibility: hidden;
+        /* visibility: hidden; */
         flex-direction: column;
         background-color: rgb(9, 9, 49);
         position: absolute;
         right: -10em;
         top: 0;
         padding: 2em;
+        height: auto;
         padding-top: 1.8em;
         margin-top: 2.6em;
         border-bottom-left-radius: .5em;
         transition: visibility 150ms linear 0s, right 300ms;
     }
 
-    .navbar-toggle-visible {
+    #header > .navbar-mobile-visible {
         visibility: visible;
         right: 0;
         transition: visibility 0s linear 0s, right 300ms;

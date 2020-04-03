@@ -10,13 +10,13 @@ function navbarToggleClicked() {
     var navbarToggleBtn = document.getElementsByClassName('navbar-toggle')[0];
 
     navbarToggleBtn.addEventListener("click", function() {
-        var navbarNav = document.getElementsByClassName('navbar-nav')[0];
-        var isVisible = navbarNav.classList.contains('navbar-toggle-visible');
+        var navbarNav = document.getElementById('nav-bar');
+        var isVisible = navbarNav.classList.contains('navbar-mobile-visible');
 
         if (!isVisible) {
-            navbarNav.classList.add('navbar-toggle-visible');
+            navbarNav.classList.add('navbar-mobile-visible');
         } else {
-            navbarNav.classList.remove('navbar-toggle-visible');
+            navbarNav.classList.remove('navbar-mobile-visible');
         }
 
     });
