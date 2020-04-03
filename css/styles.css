@@ -38,6 +38,7 @@ html, body {
 }
 
 .navbar-nav li {
+    cursor: pointer;
     margin-left: 2.3em;
     padding: .1em 1em;
     padding-bottom: .2em;
