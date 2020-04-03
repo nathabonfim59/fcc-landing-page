@@ -8,7 +8,6 @@ html, body {
     padding: 0;
     padding-left: 3em;
     padding-right: 3em;
-    background: pink; /* Debugging */
 }
 
 .navbar {
@@ -26,6 +25,10 @@ html, body {
 .navbar-logo img {
     height: 1.3em;
     width: auto;
+}
+
+.navbar-toggle {
+    display: none;
 }
 
 .navbar-nav {
@@ -55,4 +58,81 @@ html, body {
     text-decoration: none;
     font-weight: 600;
     color: #fff;
+}
+
+.navbar-toggle {
+    cursor: pointer;
+    height: 2.6em;
+    width: 2.8em;
+    right: .6em;
+    position: absolute;
+}
+
+.navbar-toggle-icon,
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+    height: .25em;
+    width: 1.6em;
+    background: #fff;
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: .2em;
+}
+
+.navbar-toggle-icon {
+    margin-top: 1.15em;
+    right: .6em;
+    display: none;
+}
+
+.navbar-toggle-icon::before {
+    margin-top: .5em;
+}
+
+.navbar-toggle-icon::after {
+    margin-top: -.5em;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        height: 2.6em;
+    }
+    .navbar-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        visibility: hidden;
+        flex-direction: column;
+        background-color: rgb(9, 9, 49);
+        position: absolute;
+        right: -10em;
+        top: 0;
+        padding: 2em;
+        padding-top: 1.8em;
+        margin-top: 2.6em;
+        border-bottom-left-radius: .5em;
+        transition: visibility 150ms linear 0s, right 300ms;
+    }
+
+    .navbar-toggle-visible {
+        visibility: visible;
+        right: 0;
+        transition: visibility 0s linear 0s, right 300ms;
+    }
+
+    .navbar-nav li {
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: .4em;
+    }
+
+    .navbar-toggle,
+    .navbar-toggle-icon {
+        display: block;
+    }
+
+
 }
