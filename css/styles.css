@@ -90,22 +90,66 @@ html, body {
 
 section {
     min-height: 30em;
-    background: red;
 }
+
+section h1 {
+    margin: 0;
+}
+
+
+#why {
+    background-color: #0A0A23;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#why .column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#why .column .video {
+    background-color: #fff;
+    height: 60%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+#why .column .wrapper {
+    width: 70%;
+}
+
+#why .column .wrapper h1 {
+    font-weight: 400;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+#why .column .wrapper h1 strong {
+    color: #8787EA;
+}
+
 
 @media screen and (max-width: 992px) {
     #header {
         height: 2.8em;
-        overflow-x: auto;
+        display: block;
     }
 
     .header-logo {
         width: 100%;
+        height: 100%;
         justify-content: center;
     }
 
     #nav-bar {
-        /* visibility: hidden; */
+        position: relative;
+        visibility: hidden;
         flex-direction: column;
         background-color: rgb(9, 9, 49);
         position: absolute;
@@ -133,7 +177,29 @@ section {
 
     .navbar-toggle,
     .navbar-toggle-icon {
+        margin-top: -.78em;
         display: block;
+    }
+
+    #why {
+        flex-direction: column;
+    }
+
+    #why .column {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #why .column .wrapper {
+        width: 100%;
+    }
+
+    #why .column .video {
+        background-color: #fff;
+        min-height: 16em;
+        width: 80%;
+        border-radius: 10px;
+        margin-bottom: 2em;
     }
 
 }
